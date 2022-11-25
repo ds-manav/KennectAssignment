@@ -1,0 +1,18 @@
+A JSON web token(JWT) is JSON Object which is used to securely transfer information over the web between two parties (client or sever).
+It can be used as an authentication appraoch to make our informations encrypted and can also be used for information exchange.
+The token is mainly composed of header, payload, signature.These three parts are separated by dots(.).
+
+JWT HEADER: A header in a JWT is mostly used to describe the cryptographic operations applied to the JWT like signing/decryption technique 
+           used on it. It also stores the information of the content type. ex. application/JSON.
+           HS256 and RS256 are the two main algorithms we make use of in the header section of a JWT
+
+JWT PAYLOAD: It is the part of the JWT where all the user data is actually added.This information is readable by anyone so it is always advised
+             to not put any confidential information in here.This information is present as a JSON object then this JSON object is encoded to BASE64URL.
+
+JWT SIGNATURE:This is the third part of JWT and used to verify the authenticity of token. BASE64URL encoded header and payload are joined together with dot and it is then hashed using the hashing algorithm defined in a header with a secret key. 
+              This signature is then appended to header and payload using dot(.) which forms our actual token header.payload.signature
+
+And  all these above components together is something  what makes up a JWT.
+
+JWT in a serialized form 
+[header].[payload].[signature]

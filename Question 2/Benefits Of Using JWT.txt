@@ -1,0 +1,5 @@
+These are the three main benefits that i myself find best for why to use jwt.
+1) IT is a stateless mechanism which means a user state is never saved in the database. 
+   With jwt we dont need to query database to authenticate user for every api call.
+2) It protects against Cross Site Request Forgery Attacks.
+3) The size of JWT is very compact which means you can send it through HTTP header, Post parameter , or through a url.
